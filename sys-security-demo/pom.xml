@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>sys-security</artifactId>
+        <groupId>com.sys.security</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../sys-security/pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>sys-security-demo</artifactId>
+
+    <dependencies>
+
+
+        <dependency>
+            <groupId>com.sys.security</groupId>
+            <artifactId>sys-security-app</artifactId>
+            <version>${sys.security.version}</version>
+        </dependency>
+        <!--<dependency>
+            <groupId>com.sys.security</groupId>
+            <artifactId>sys-security-browser</artifactId>
+            <version>${sys.security.version}</version>
+        </dependency>-->
+        <!--解析JWT的工具-->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
+        </dependency>
+        <!--swagger-->
+       <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <!-- 当所依赖的其他模块，有启动类的时候，需要以下配置，指定唯一启动类，
+                        本次事例未涉及其他模块有启动类，可自行测试 -->
+                <configuration>
+                    <!-- 指定该Main Class为全局的唯一入口 -->
+                    <mainClass>com.sys.security.DemoApplication</mainClass>
+                    <layout>ZIP</layout>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中-->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
