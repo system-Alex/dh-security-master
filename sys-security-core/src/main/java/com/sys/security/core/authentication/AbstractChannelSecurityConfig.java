@@ -13,12 +13,13 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.stereotype.Component;
 
 /**
  * @author alex
  *
  */
-@EnableWebSecurity
+@Component
 public class AbstractChannelSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
@@ -34,9 +35,6 @@ public class AbstractChannelSecurityConfig extends WebSecurityConfigurerAdapter 
 			.successHandler(sysAuthenticationSuccessHandler)
 			.failureHandler(sysAuthenticationFailureHandler);
 	}
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
+
 	
 }
