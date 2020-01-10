@@ -17,7 +17,7 @@ public class BrowserProperties {
 	private String signUpUrl = "/sys-signUp.html";
 	private String signOutSuccessUrl="/sys-logout.html";
 	
-	private String signInPage = SysSecurityConstants.DEFAULT_LOGIN_PAGE_URL;
+	private String signInPage = SysSecurityConstants.DEFAULT_SIGN_IN_PAGE_URL;
 	
 	private LoginResponseType loginType = LoginResponseType.JSON;
 	

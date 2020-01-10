@@ -34,10 +34,16 @@ public class SocialConfig extends SocialConfigurerAdapter {
 
 	@Autowired
 	private SysSecurityProperties securityProperties;
-	
+
 	@Autowired(required = false)
 	private ConnectionSignUp connectionSignUp;
 
+	@Autowired(required = false)
+	private SocialAuthenticationFilterPostProcessor socialAuthenticationFilterPostProcessor;
+
+	/* (non-Javadoc)
+	 * @see org.springframework.social.config.annotation.SocialConfigurerAdapter#getUsersConnectionRepository(org.springframework.social.connect.ConnectionFactoryLocator)
+	 */
 	@Override
 	public UsersConnectionRepository getUsersConnectionRepository(ConnectionFactoryLocator connectionFactoryLocator) {
 		JdbcUsersConnectionRepository repository = new JdbcUsersConnectionRepository(dataSource,
@@ -49,14 +55,25 @@ public class SocialConfig extends SocialConfigurerAdapter {
 		return repository;
 	}
 
+	/**
+	 * 社交登录配置类，供浏览器或app模块引入设计登录配置用。
+	 * @return
+	 */
 	@Bean
-	public SpringSocialConfigurer sysSocialSecurityConfig() {
+	public SpringSocialConfigurer imoocSocialSecurityConfig() {
 		String filterProcessesUrl = securityProperties.getSocial().getFilterProcessesUrl();
 		SysSpringSocialConfigurer configurer = new SysSpringSocialConfigurer(filterProcessesUrl);
 		configurer.signupUrl(securityProperties.getBrowser().getSignUpUrl());
+		configurer.setSocialAuthenticationFilterPostProcessor(socialAuthenticationFilterPostProcessor);
 		return configurer;
 	}
 
+	/**
+	 * 用来处理注册流程的工具类
+	 *
+	 * @param connectionFactoryLocator
+	 * @return
+	 */
 	@Bean
 	public ProviderSignInUtils providerSignInUtils(ConnectionFactoryLocator connectionFactoryLocator) {
 		return new ProviderSignInUtils(connectionFactoryLocator,

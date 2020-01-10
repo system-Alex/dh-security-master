@@ -1,8 +1,10 @@
 package com.sys.security.app;
 
+import com.sys.security.app.authentication.openid.OpenIdAuthenticationSecurityConfig;
 import com.sys.security.core.authentication.mobile.SmsCodeAuthenticationSecurityConfig;
 import com.sys.security.core.properties.SysSecurityConstants;
 import com.sys.security.core.properties.SysSecurityProperties;
+import com.sys.security.core.validate.code.ValidateCodeSecurityConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -31,24 +33,30 @@ public class SysResourceServerConfig extends ResourceServerConfigurerAdapter {
     private SpringSocialConfigurer sysSocialSecurityConfig;
     @Autowired
     private SysSecurityProperties securityProperties;
+    @Autowired
+    private ValidateCodeSecurityConfig validateCodeSecurityConfig;
+    @Autowired
+    private OpenIdAuthenticationSecurityConfig openIdAuthenticationSecurityConfig;
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.formLogin()
-                .loginPage(SysSecurityConstants.DEFAULT_UNAUTHENTICATION_URL)
-                .loginProcessingUrl(SysSecurityConstants.DEFAULT_LOGIN_PROCESSING_URL_FORM)
+                .loginPage(SysSecurityConstants.DEFAULT_UN_AUTHENTICATION_URL)
+                .loginProcessingUrl(SysSecurityConstants.DEFAULT_SIGN_IN_PROCESSING_URL_FORM)
                 .successHandler(sysAuthenticationSuccessHandler)
                 .failureHandler(sysAuthenticationFailureHandler);
 
-        http//.apply(validateCodeSecurityConfig)
-              //  .and()
+        http.apply(validateCodeSecurityConfig)
+               .and()
                 .apply(smsCodeAuthenticationSecurityConfig)
                 .and()
                 .apply(sysSocialSecurityConfig)
                 .and()
+                .apply(openIdAuthenticationSecurityConfig)
+                .and()
                 .authorizeRequests()
                 .antMatchers(
-                        SysSecurityConstants.DEFAULT_UNAUTHENTICATION_URL,
-                        SysSecurityConstants.DEFAULT_LOGIN_PROCESSING_URL_MOBILE,
+                        SysSecurityConstants.DEFAULT_UN_AUTHENTICATION_URL,
+                        SysSecurityConstants.DEFAULT_SIGN_IN_PROCESSING_URL_MOBILE,
                         securityProperties.getBrowser().getSignInPage(),
                         SysSecurityConstants.DEFAULT_VALIDATE_CODE_URL_PREFIX+"/*",
                         securityProperties.getBrowser().getSignUpUrl(),
