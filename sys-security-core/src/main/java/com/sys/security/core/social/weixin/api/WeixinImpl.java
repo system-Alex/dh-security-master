@@ -3,6 +3,7 @@
  */
 package com.sys.security.core.social.weixin.api;
 
+import com.alibaba.fastjson.JSON;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -60,7 +61,7 @@ public class WeixinImpl extends AbstractOAuth2ApiBinding implements Weixin {
 		}
 		WeixinUserInfo profile = null;
 		try {
-			profile = objectMapper.readValue(response, WeixinUserInfo.class);
+            profile= JSON.parseObject(response,WeixinUserInfo.class);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

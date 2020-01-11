@@ -21,7 +21,7 @@ import org.springframework.stereotype.Component;
  * @author alex
  *
  */
-@Component
+@Component("myUserDetailsService")
 @Slf4j
 public class MyUserDetailsService implements UserDetailsService, SocialUserDetailsService {
 

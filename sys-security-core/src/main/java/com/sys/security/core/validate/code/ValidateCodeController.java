@@ -36,6 +36,12 @@ public class ValidateCodeController {
 	@GetMapping(SysSecurityConstants.DEFAULT_VALIDATE_CODE_URL_PREFIX + "/{type}")
 	public void createCode(HttpServletRequest request, HttpServletResponse response, @PathVariable String type)
 			throws Exception {
+        /**
+         * ServletWebRequest是一个包装类，
+         * 如果参数为new ServletWebRequest(request, response)
+         * 可以直接用ServletWebRequest request 去接，
+         * 省去了写response对象的麻烦，如果想要再获取response对象，只需要用request.getResponse()方法就可以
+         */
 		validateCodeProcessorHolder.findValidateCodeProcessor(type).create(new ServletWebRequest(request, response));
 	}
 

@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author alex
+ * 基于表单登录基本配置
  *
  */
 public class AbstractChannelSecurityConfig extends WebSecurityConfigurerAdapter {

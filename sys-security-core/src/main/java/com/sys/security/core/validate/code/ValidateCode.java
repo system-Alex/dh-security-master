@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 
 /**
  * @author alex
- *
+ *存放到redis里的对象必须是序列化的，所以这里要实现Serializable接口
  */
 @Data
 @AllArgsConstructor

@@ -22,9 +22,19 @@ public class QQOAuth2Template extends OAuth2Template {
 
     public QQOAuth2Template(String clientId, String clientSecret, String authorizeUrl, String accessTokenUrl) {
         super(clientId, clientSecret, authorizeUrl, accessTokenUrl);
+        //只有这样才会将client_id 和 client_secret拼接为请求参数
         setUseParametersForClientAuthentication(true);
     }
-
+    /**
+     * 通过QQ互联（https://wiki.connect.qq.com/%E4%BD%BF%E7%94%A8authorization_code%E8%8E%B7%E5%8F%96access_token）
+     * 可以知道获取accessToken这一步其实获取到的是一个字符串，而OAuth2Template里的postForAccessGrant方法默认获取的类型
+     * 为一个Map（获取的信息为json格式才可直接转成Map），因此需要重写postForAccessGrant方法，将获取到的accessToken等
+     * 信息封装到AccessGrant对象里
+     *
+     * @param accessTokenUrl
+     * @param parameters
+     * @return
+     */
     @Override
     protected AccessGrant postForAccessGrant(String accessTokenUrl, MultiValueMap<String, String> parameters) {
         String responseStr = getRestTemplate().postForObject(accessTokenUrl, parameters, String.class);
@@ -39,7 +49,11 @@ public class QQOAuth2Template extends OAuth2Template {
 
         return new AccessGrant(accessToken, null, refreshToken, expiresIn);
     }
-
+    /**
+     * 重写createRestTemplate方法，使其加上可以处理content type为 [text/html]的HttpMessageConverter
+     *
+     * @return
+     */
     @Override
     protected RestTemplate createRestTemplate() {
         RestTemplate restTemplate = super.createRestTemplate();

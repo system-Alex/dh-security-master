@@ -9,7 +9,7 @@ import org.springframework.web.context.request.ServletWebRequest;
  * 校验码存取器
  * 
  * @author alex
- *
+ *保存、获取、移除验证码的模版接口
  */
 public interface ValidateCodeRepository {
 

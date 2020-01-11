@@ -11,7 +11,8 @@ import java.util.Map;
 
 /**
  * @author alex
- *
+ * 由于微信，QQ，微博等解绑和绑定都想用这个视图，但providerId不可能一样
+ * 所以这里不能直接用@Component注解将其写死
  */
 public class SysConnectView extends AbstractView {
 
@@ -20,6 +21,7 @@ public class SysConnectView extends AbstractView {
                                            HttpServletResponse response) throws Exception {
 
         response.setContentType("text/html;charset=UTF-8");
+        //如果map（Model对象）里有Connection对象，则表示绑定，否则表示解绑
         if (model.get("connection") == null) {
             response.getWriter().write("<h3>解绑成功</h3>");
         } else {

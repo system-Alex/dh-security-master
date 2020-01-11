@@ -16,7 +16,7 @@ import org.springframework.web.context.request.ServletWebRequest;
 
 /**
  * @author alex
- *
+ * 注意验证码+ 超时时间可以进行配置
  */
 @Component("smsValidateCodeGenerator")
 @Data

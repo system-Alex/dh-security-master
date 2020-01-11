@@ -18,7 +18,9 @@ import java.util.Random;
 
 /**
  * @author alex
- *
+ * 生成图形验证码的主要逻辑
+ *(1)请求中可以传入高度和宽度
+ *(2)配置文件中可以配置高度、宽度、验证码的位数和过期时间
  */
 @Data
 public class ImageCodeGenerator implements ValidateCodeGenerator {
@@ -32,6 +34,11 @@ public class ImageCodeGenerator implements ValidateCodeGenerator {
 
 	@Override
 	public ImageCode generate(ServletWebRequest request) {
+        /**
+         * ServletRequestUtils工具的作用是
+         * 如果可以获取到请求中name为"width"的变量,将其转为int类型并作为返回值
+         * 如果获取不到请求中name为"width"的变量,则将第三个参数进行返回即下面的securityProperties.getCode().getImage().getWidth()
+         */
 		int width = ServletRequestUtils.getIntParameter(request.getRequest(), "width",
 				securityProperties.getCode().getImage().getWidth());
 		int height = ServletRequestUtils.getIntParameter(request.getRequest(), "height",

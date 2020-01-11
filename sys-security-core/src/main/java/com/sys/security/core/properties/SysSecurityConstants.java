@@ -4,15 +4,16 @@
 package com.sys.security.core.properties;
 
 /**
- * @author zhailiang
- *
+ * @author alex
+ * 利用interface封装常量的好处是不用写public static final三个关键字
+ *因为interface中常量会默认加上这三个关键字
  */
 public interface SysSecurityConstants {
 
 	/**
 	 * 默认的处理验证码的url前缀
 	 */
-	String DEFAULT_VALIDATE_CODE_URL_PREFIX = "/code";
+     String DEFAULT_VALIDATE_CODE_URL_PREFIX = "/code";
 	/**
 	 * 当请求需要身份认证时，默认跳转的url
 	 *

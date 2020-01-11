@@ -63,6 +63,12 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
 	 * @param validateCode
 	 */
 	private void save(ServletWebRequest request, C validateCode) {
+        /**
+         *  由于存放到redis里的对象必须是序列化的，---->对象里面的属性也必须是序列化的
+         *  而ImageCode中的BufferedImage对象没有实现Serializable接口，即不可序列化
+         *  因此不做如下处理还是会报序列化错误
+         *  实际业务中我们只需要把生成的验证码和过期时间存到session（redis）里就可以了，因此完全可以按照如下的方式去做
+         */
 		ValidateCode code = new ValidateCode(validateCode.getCode(), validateCode.getExpireTime());
 		validateCodeRepository.save(request, code, getValidateCodeType(request));
 	}
@@ -92,11 +98,12 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
 	public void validate(ServletWebRequest request) {
 
 		ValidateCodeType codeType = getValidateCodeType(request);
-
-		C codeInSession = (C) validateCodeRepository.get(request, codeType);
+        //从session或redis里面获取验证码
+		C code = (C) validateCodeRepository.get(request, codeType);
 
 		String codeInRequest;
 		try {
+		    //从请求中去取出验证码
 			codeInRequest = ServletRequestUtils.getStringParameter(request.getRequest(),
 					codeType.getParamNameOnValidate());
 		} catch (ServletRequestBindingException e) {
@@ -107,16 +114,16 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
 			throw new ValidateCodeException(codeType + "验证码的值不能为空");
 		}
 
-		if (codeInSession == null) {
+		if (code == null) {
 			throw new ValidateCodeException(codeType + "验证码不存在");
 		}
 
-		if (codeInSession.isExpired()) {
+		if (code.isExpired()) {
 			validateCodeRepository.remove(request, codeType);
 			throw new ValidateCodeException(codeType + "验证码已过期");
 		}
 
-		if (!StringUtils.equals(codeInSession.getCode(), codeInRequest)) {
+		if (!StringUtils.equals(code.getCode(), codeInRequest)) {
 			throw new ValidateCodeException(codeType + "验证码不匹配");
 		}
 		

@@ -4,10 +4,43 @@
     <list default="true" id="a76465be-2d95-4b87-99bf-76179ec60231" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sys-security-browser/src/main/java/com/sys/security/browser/BrowserSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-browser/src/main/java/com/sys/security/browser/BrowserSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-browser/src/main/java/com/sys/security/browser/session/SysExpiredSessionStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-browser/src/main/java/com/sys/security/browser/session/SysExpiredSessionStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-browser/src/main/java/com/sys/security/browser/session/SysInvalidSessionStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-browser/src/main/java/com/sys/security/browser/session/SysInvalidSessionStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/SecurityCoreConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/SecurityCoreConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/authentication/AbstractChannelSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/authentication/AbstractChannelSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/authentication/mobile/SmsCodeAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/authentication/mobile/SmsCodeAuthenticationProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/authentication/mobile/SmsCodeAuthenticationSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/authentication/mobile/SmsCodeAuthenticationSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/authentication/mobile/SmsCodeAuthenticationToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/authentication/mobile/SmsCodeAuthenticationToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/properties/LoginResponseType.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/properties/LoginResponseType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/properties/SysSecurityConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/properties/SysSecurityConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/SocialAuthenticationFilterPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/SocialAuthenticationFilterPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/SocialConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/SocialConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/SysConnectView.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/SysConnectView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/SysConnectionStatusView.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/SysConnectionStatusView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/SysSpringSocialConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/SysSpringSocialConfigurer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/qq/api/QQImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/qq/api/QQImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/qq/connet/QQAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/qq/connet/QQAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/qq/connet/QQConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/qq/connet/QQConnectionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/qq/connet/QQOAuth2Template.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/qq/connet/QQOAuth2Template.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/qq/connet/QQServiceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/qq/connet/QQServiceProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/weixin/api/Weixin.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/weixin/api/Weixin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/weixin/api/WeixinImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/weixin/api/WeixinImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/weixin/config/WeixinAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/weixin/config/WeixinAutoConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/weixin/connect/WeixinConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/social/weixin/connect/WeixinConnectionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/support/SimpleResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/support/SimpleResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/ValidateCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/ValidateCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/ValidateCodeProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/ValidateCodeProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sys-security-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/ValidateCodeBeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/ValidateCodeBeanConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/ValidateCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/ValidateCodeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/ValidateCodeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/ValidateCodeFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/ValidateCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/ValidateCodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/ValidateCodeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/ValidateCodeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/image/ImageCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/image/ImageCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/image/ImageCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/image/ImageCodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/impl/AbstractValidateCodeProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/impl/AbstractValidateCodeProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/sms/DefaultSmsCodeSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/sms/DefaultSmsCodeSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/sms/SmsCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/sms/SmsCodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/sms/SmsCodeSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-core/src/main/java/com/sys/security/core/validate/code/sms/SmsCodeSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-security-demo/src/main/java/com/sys/security/security/service/MyUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-security-demo/src/main/java/com/sys/security/security/service/MyUserDetailsService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +73,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1W8qPxRJ8KFbrw7qe2Tqc5EPyyj" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -129,7 +164,7 @@
       <workItem from="1578585899855" duration="1008000" />
       <workItem from="1578632234870" duration="126000" />
       <workItem from="1578655978205" duration="16538000" />
-      <workItem from="1578703711819" duration="10972000" />
+      <workItem from="1578703711819" duration="18546000" />
     </task>
     <task id="LOCAL-00001" summary="spring security 授权认证  基于浏览器和app  jwt token  spring oauth2">
       <created>1578580861053</created>
@@ -173,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578664377722</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="spring security 授权认证  基于浏览器和app  jwt token  spring oauth2">
+      <created>1578728581996</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1578728581996</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,10 +274,11 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="114" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1578668294058" />
-    <state x="119" y="0" key="CommitChangelistDialog2" timestamp="1578664372509">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="167" y="0" width="1395" height="973" key="CommitChangelistDialog2" timestamp="1578728580445">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="119" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1578664372509" />
+    <state x="167" y="0" width="1395" height="973" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1578728580445" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1578704815162">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -253,66 +296,82 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="282" y="71" key="Github.UntrackedFilesDialog/0.0.1366.738@0.0.1366.738" timestamp="1578579963581" />
-    <state width="1877" height="467" key="GridCell.Tab.0.bottom" timestamp="1578728407970">
+    <state width="1877" height="506" key="GridCell.Tab.0.bottom" timestamp="1578736075522">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1322" height="93" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1578673196100" />
-    <state width="1877" height="467" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578728407970" />
-    <state width="1877" height="467" key="GridCell.Tab.0.center" timestamp="1578728407970">
+    <state width="1877" height="506" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578736075522" />
+    <state width="1877" height="506" key="GridCell.Tab.0.center" timestamp="1578736075522">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1322" height="93" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1578673196100" />
-    <state width="1877" height="467" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578728407970" />
-    <state width="1877" height="467" key="GridCell.Tab.0.left" timestamp="1578728407970">
+    <state width="1877" height="506" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578736075522" />
+    <state width="1877" height="506" key="GridCell.Tab.0.left" timestamp="1578736075522">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1322" height="93" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1578673196100" />
-    <state width="1877" height="467" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578728407970" />
-    <state width="1877" height="467" key="GridCell.Tab.0.right" timestamp="1578728407970">
+    <state width="1877" height="506" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578736075522" />
+    <state width="1877" height="506" key="GridCell.Tab.0.right" timestamp="1578736075522">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1322" height="93" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1578673196100" />
-    <state width="1877" height="467" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578728407970" />
-    <state width="1877" height="467" key="GridCell.Tab.1.bottom" timestamp="1578728410081">
+    <state width="1877" height="506" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578736075522" />
+    <state width="1877" height="233" key="GridCell.Tab.1.bottom" timestamp="1578736065514">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1322" height="93" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1578673196101" />
-    <state width="1877" height="467" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578728410081" />
-    <state width="1877" height="467" key="GridCell.Tab.1.center" timestamp="1578728410081">
+    <state width="1877" height="233" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578736065514" />
+    <state width="1877" height="233" key="GridCell.Tab.1.center" timestamp="1578736065513">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1322" height="93" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1578673196100" />
-    <state width="1877" height="467" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578728410081" />
-    <state width="1877" height="467" key="GridCell.Tab.1.left" timestamp="1578728410080">
+    <state width="1877" height="233" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578736065513" />
+    <state width="1877" height="233" key="GridCell.Tab.1.left" timestamp="1578736065513">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1322" height="93" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1578673196100" />
-    <state width="1877" height="467" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578728410080" />
-    <state width="1877" height="467" key="GridCell.Tab.1.right" timestamp="1578728410081">
+    <state width="1877" height="233" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578736065513" />
+    <state width="1877" height="233" key="GridCell.Tab.1.right" timestamp="1578736065513">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1322" height="93" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1578673196100" />
-    <state width="1877" height="467" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578728410081" />
-    <state width="1877" height="467" key="GridCell.Tab.2.bottom" timestamp="1578728440733">
+    <state width="1877" height="233" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578736065513" />
+    <state width="1877" height="233" key="GridCell.Tab.2.bottom" timestamp="1578736065514">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1322" height="93" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1578673196101" />
-    <state width="1877" height="467" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578728440733" />
-    <state width="1877" height="467" key="GridCell.Tab.2.center" timestamp="1578728440733">
+    <state width="1877" height="233" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578736065514" />
+    <state width="1877" height="233" key="GridCell.Tab.2.center" timestamp="1578736065514">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1322" height="93" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1578673196101" />
-    <state width="1877" height="467" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578728440733" />
-    <state width="1877" height="467" key="GridCell.Tab.2.left" timestamp="1578728440733">
+    <state width="1877" height="233" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578736065514" />
+    <state width="1877" height="233" key="GridCell.Tab.2.left" timestamp="1578736065514">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1322" height="93" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1578673196101" />
-    <state width="1877" height="467" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578728440733" />
-    <state width="1877" height="467" key="GridCell.Tab.2.right" timestamp="1578728440733">
+    <state width="1877" height="233" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578736065514" />
+    <state width="1877" height="233" key="GridCell.Tab.2.right" timestamp="1578736065514">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1322" height="93" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1578673196101" />
-    <state width="1877" height="467" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578728440733" />
+    <state width="1877" height="233" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578736065514" />
+    <state width="1877" height="76" key="GridCell.Tab.3.bottom" timestamp="1578736033870">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="76" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578736033870" />
+    <state width="1877" height="76" key="GridCell.Tab.3.center" timestamp="1578736033870">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="76" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578736033870" />
+    <state width="1877" height="76" key="GridCell.Tab.3.left" timestamp="1578736033870">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="76" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578736033870" />
+    <state width="1877" height="76" key="GridCell.Tab.3.right" timestamp="1578736033870">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="76" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578736033870" />
     <state width="1877" height="467" key="GridCell.Tab.4.bottom" timestamp="1578728440117">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -338,10 +397,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="643" y="217" key="SpringBootCustomization/0.0.1920.1040@0.0.1920.1040" timestamp="1578554975397" />
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1578664403360">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="387" y="141" key="Vcs.Push.Dialog.v2" timestamp="1578728597911">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1578664403360" />
+    <state x="387" y="141" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1578728597911" />
     <state x="668" y="400" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578728500489">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

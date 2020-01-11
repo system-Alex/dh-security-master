@@ -12,7 +12,7 @@ import java.io.IOException;
 
 /**
  * @author alex
- *
+ *session超时的处理策略
  */
 public class SysInvalidSessionStrategy extends AbstractSessionStrategy implements InvalidSessionStrategy {
 

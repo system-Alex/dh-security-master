@@ -27,7 +27,8 @@ import java.util.Set;
 
 /**
  * @author alex
- *
+ *继承InitializingBean并实现其中afterPropertiesSet的作用是，
+ *在当前bean的其他参数都组装完成后，调用afterPropertiesSet初始化下面的urls变量
  */
 @Component("validateCodeFilter")
 public class ValidateCodeFilter extends OncePerRequestFilter implements InitializingBean {

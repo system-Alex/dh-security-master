@@ -11,7 +11,7 @@ import java.util.Collection;
 
 /**
  * @author alex
- *
+ *仿照UsernamePasswordAuthenticationToken
  */
 public class SmsCodeAuthenticationToken extends AbstractAuthenticationToken {
 
