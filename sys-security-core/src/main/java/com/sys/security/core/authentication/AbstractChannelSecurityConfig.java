@@ -19,7 +19,6 @@ import org.springframework.stereotype.Component;
  * @author alex
  *
  */
-@Component
 public class AbstractChannelSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired

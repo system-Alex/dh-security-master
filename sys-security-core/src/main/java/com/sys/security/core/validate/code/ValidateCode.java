@@ -19,7 +19,6 @@ import java.time.LocalDateTime;
 public class ValidateCode implements Serializable {
 	private static final long serialVersionUID = 162900044932073435L;
 	private String code;
-	
 	private LocalDateTime expireTime;
 	
 	public ValidateCode(String code, int expireIn){

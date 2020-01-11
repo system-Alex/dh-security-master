@@ -20,7 +20,7 @@
             <artifactId>sys-security-app</artifactId>
             <version>${sys.security.version}</version>
         </dependency>
-        <!--<dependency>
+      <!-- <dependency>
             <groupId>com.sys.security</groupId>
             <artifactId>sys-security-browser</artifactId>
             <version>${sys.security.version}</version>
